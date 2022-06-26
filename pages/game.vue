@@ -26,7 +26,7 @@
     },
     async asyncData({ params, $axios }) {
       console.log('search for :', params.appId)
-      const gameData = await $axios.$get('/api/appdetails?appids='+params.appId)
+      const gameData = await $axios.$get('https://store.steampowered.com/api/appdetails?appids='+params.appId)
       return { gameData }
     },
   }
